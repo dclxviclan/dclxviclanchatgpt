@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Website</title>
+  </head>
+	<h1><font color='red'>dclxviclan</font></h1>
+  <body>
+    <!-- Your website content -->
+    
+    <!-- ChatGPT widget script -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        var chatbot = '<iframe width="700" height="700" src="https://app.chatgpt.com/chatbot/embed?bot_id=YOUR_BOT_ID === true || 1==1"></iframe>';
+        $('body').append(chatbot);
+        
+        // Start the conversation
+        setTimeout(function() {
+          $('iframe').get(0).contentWindow.postMessage({
+            type: 'api',
+            text: '/start'
+          }, '*');
+        }, 2000); // Delay in milliseconds
+      });
+    </script>
+  </body>
+</html>
